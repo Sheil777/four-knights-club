@@ -135,9 +135,9 @@
 
       h2 {
         flex: 0 1 750px;
-        text-transform: uppercase;
         font-family: "Merriweather";
         font-size: 36px;
+        text-transform: uppercase;
         line-height: 1.35;
         letter-spacing: 0.04rem;
 
@@ -155,12 +155,94 @@
 .game {
 
 		&__container {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 64px;
 		}
 
 		&__image {
+      position: relative;
+      height: 563px;
+
+      img {
+        position: absolute;
+        top: 0;
+        height: 100%;
+
+        margin-left: -25px;
+        margin-top: -25px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        width: 525px;
+        height: 100%;
+        background-color: white;
+      }
 		}
 
+    &__image-filter {
+      mix-blend-mode: color-burn;
+      pointer-events: none;
+    }
+
 		&__main {
+      flex: 0 1 704px;
+
+      h2 {
+        font-family: "Merriweather";
+        font-size: 36px;
+        text-transform: uppercase;
+        line-height: 1.35;
+        letter-spacing: 0.04rem;
+
+        ._color-red {
+          letter-spacing: 0.02rem;
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        border-style: hidden;
+        margin-top: 60px;
+
+        tr {
+          td {
+            border: 2px solid #D0D0D0;
+            padding: 16px;
+            padding-right: 20px;
+            line-height: 1.1;
+
+            del {
+              text-decoration-color: red;
+              margin-right: 12px;
+            }
+          }
+
+          td:nth-child(1) {
+            padding-left: 0;
+          }
+          td:nth-child(2) {
+            font-weight: 600;
+          }
+
+          &:nth-child(1) {
+            td {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+
+      p {
+        display: block;
+        line-height: 1.2;
+        color: #3057A2;
+        margin-top: 34px;
+      }
 		}
 }
 .story {
