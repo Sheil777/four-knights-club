@@ -57,10 +57,12 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.02rem;
 }
-.running-line__container {
+.running-line ul li:nth-child(1) {
+  margin-left: 40px;
+}
+.running-line__content {
   white-space: nowrap;
   animation: marquee 30s linear infinite;
-  padding-left: 100%;
 }
 
 @keyframes marquee {

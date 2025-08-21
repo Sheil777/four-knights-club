@@ -56,12 +56,15 @@ body {
         gap: 36px;
         text-transform: uppercase;
         letter-spacing: .02rem;
+
+        li:nth-child(1) {
+            margin-left: 40px;
+        }
     }
 
-    &__container {
+    &__content {
         white-space: nowrap;
         animation: marquee 30s linear infinite;
-        padding-left: 100%;
     }
 }
 
