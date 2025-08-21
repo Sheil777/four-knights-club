@@ -1,0 +1,185 @@
+.header {
+
+  &__container {
+    position: relative;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 28px;
+    z-index: 50;
+
+    span {
+      display: inline-block;
+      text-transform: uppercase;
+      color: #595653;
+      font-weight: bold;
+      font-size: 16.65px;
+      margin-left: 2px;
+    }
+  }
+}
+.promo {
+    background-color: #E9DED4;
+    background-image: url("../img/promo_background.png");
+    background-blend-mode: color-burn;
+
+		&__container {
+      position: relative;
+      padding-top: 124px;
+      padding-bottom: 132px;
+
+      h1 {
+        font-family: "Merriweather";
+        font-size: 60px;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        line-height: 110%;
+
+        span {
+          &:nth-child(1) {
+            letter-spacing: 0.17rem;
+          }
+
+          &:nth-child(2) {
+            letter-spacing: 0.13rem;
+          }
+
+          &:nth-child(3) {
+            padding-left: 92px;
+          }
+
+          &:nth-child(4) {
+            padding-left: 37px;
+          }
+        }
+      }
+		}
+
+    &__info {
+      position: relative;
+      max-width: 560px;
+      z-index: 5;
+
+      p {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 24px;
+        margin-left: -16px;
+        line-height: 1.3;
+      }
+    }
+
+		&__buttons {
+      display: flex;
+      justify-content: space-between;
+      max-width: 542px;
+      margin-top: 39px;
+		}
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 72px;
+      flex: 0 0 263px;
+      border: 2px solid #1f1f1f;
+      border-radius: 66px;
+      color: #1F1F1F;
+      font-size: 16px;
+      line-height: 1.3;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #1F1F1F;
+        color: white;
+      }
+
+      &_fill {
+        background-color: #1f1f1f;
+        color: white;
+
+        &:hover {
+          background-color: #FBCE51;
+          border: 2px solid #FBCE51;
+          color: #1F1F1F;
+        }
+      }
+    }
+
+		&__background {
+      position: absolute;
+      top: 0;
+      right: -328px;
+
+      img {
+        height: 700px;
+      }
+		}
+
+		&__running-line {
+		}
+}
+
+.running-line {
+  margin-top: -1px;
+}
+
+.lecture {
+
+		&__container {
+		}
+}
+.game {
+
+		&__container {
+		}
+
+		&__image {
+		}
+
+		&__main {
+		}
+}
+.story {
+
+		&__container {
+		}
+
+		&__header {
+		}
+
+		&__stages {
+		}
+}
+.participants {
+
+		&__container {
+		}
+
+		&__list {
+		}
+
+		&__card {
+		}
+}
+.participants-card {
+
+		&__name {
+		}
+
+		&__about {
+		}
+
+		&__button {
+		}
+}
+.footer {
+
+		&__container {
+		}
+
+		&__running-line {
+		}
+}
