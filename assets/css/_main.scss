@@ -127,8 +127,29 @@
 }
 
 .lecture {
-
 		&__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 80px;
+
+      h2 {
+        flex: 0 1 750px;
+        text-transform: uppercase;
+        font-family: "Merriweather";
+        font-size: 36px;
+        line-height: 1.35;
+        letter-spacing: 0.04rem;
+
+        ._color-red {
+          letter-spacing: 0.02rem;
+        }
+      }
+
+      img {
+        height: 250px;
+        border-radius: 50%;
+      }
 		}
 }
 .game {
