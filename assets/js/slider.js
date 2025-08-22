@@ -18,11 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.querySelector('.participants__prev');
   const nextBtn = document.querySelector('.participants__next');
 
+  // Выводим кол-во слайдов в счётчик
+  document.querySelector('.participants-count__total').textContent = cards.length
+
   // Делаем копии карточек сзади и спереди
   const firstClone = cards[0].cloneNode(true);
   const secondClone = cards[1].cloneNode(true);
   const lastClone = cards[cards.length - 1].cloneNode(true);
   const secondLastClone = cards[cards.length - 2].cloneNode(true);
+  const participants = document.querySelector('.participants__container'); // Весь контейнер, что при наведении отключать автопрокрутку
 
   slider.appendChild(firstClone);
   slider.appendChild(secondClone);
@@ -33,8 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
   let cardWidth = allCards[0].offsetWidth; // Получаем ширину карточки
 
   let currentPosition = 2;            // Текущая позиция
+  let currentCard = 3;                // Текущая карточка для вывода на экран
   let isTransitioning = false;        // Показывает происходит ли анимация
-  let autoSlideInterval;              // Время автоматического перелистывания
+  let autoSlideInterval;              // Здесь будет лежать setInterval для автоматического перелистывания
 
   // Устанавливаем начальную позицию
   slider.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
@@ -47,9 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
       currentPosition++;
       slider.style.transition = 'transform 0.5s ease';
       slider.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+      changeCurrentCard(1)
       
       // После завершения анимации
-      console.log('currentPosition', currentPosition)
       setTimeout(() => {
           // Если достигли конца клонов, переходим к началу
           if (currentPosition >= allCards.length - 3) {
@@ -69,9 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
       currentPosition--;
       slider.style.transition = 'transform 0.5s ease';
       slider.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+      changeCurrentCard(-1)
       
       // После завершения анимации
-      console.log('currentPositionDo', currentPosition)
       setTimeout(() => {
           // Если достигли начала клонов, переходим к концу
           if (currentPosition <= 0) {
@@ -85,10 +90,21 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 500);
   }
 
+  // Функция для изменения счётчика слайдов на экране
+  function changeCurrentCard(value) {
+    currentCard += value
+
+    if(currentCard > cards.length) currentCard = 1
+    if(currentCard < 1) currentCard = cards.length
+
+    document.querySelector('.participants-count__current').textContent = currentCard
+  }
+
   // Обработчики для кнопок
   nextBtn.addEventListener('click', nextSlide);
   prevBtn.addEventListener('click', prevSlide);
 
+  // Подстройка слайдера при динамическом изменении размера экрана
   window.addEventListener('resize', function() {
     slider.style.transition = '';
     cardWidth = allCards[0].offsetWidth;
@@ -97,4 +113,21 @@ document.addEventListener('DOMContentLoaded', function() {
       slider.style.transition = 'transform 0.5s ease';
     }, 500)
   })
+
+  // Автоматическое переключение слайдов
+  function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 4000);
+  }
+  
+  // Остановка автоматического переключения при наведении мыши
+  participants.addEventListener('mouseenter', () => {
+      clearInterval(autoSlideInterval);
+  });
+  
+  // Возобновление автоматического переключения при уходе мыши
+  participants.addEventListener('mouseleave', startAutoSlide);
+  
+  // Запускаем автоматическое переключение
+  startAutoSlide();
+
 })

@@ -434,6 +434,13 @@
 
       border: 1px solid #3057A2;
       border-radius: 62px;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #3057A2;
+        color: white;
+      }
 		}
 }
 
