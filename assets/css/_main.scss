@@ -335,27 +335,125 @@
     }
 }
 .participants {
+  padding-top: 200px;
 
 		&__container {
+      position: relative;
+
+      h2 {
+        font-family: "Merriweather";
+        font-size: 54px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        letter-spacing: 0.08rem;
+      }
 		}
 
+    &__slider {
+      overflow: hidden;
+      // border: 1px solid black;
+    }
+
 		&__list {
+      display: flex;
+      padding-top: 60px;
 		}
 
 		&__card {
+      flex: 0 0 33.333%; 
 		}
+
+    &__navigation {
+      position: absolute;
+      top: 10px;
+      right: 19px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__prev, &__next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex: 0 0 44px;
+      height: 44px;
+
+      background-color: #313131;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #FBCE51;
+      }
+    }
+
+    &__next {
+      transform: rotate(180deg);
+    }
 }
 .participants-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    img {
+      max-width: 320px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      margin-bottom: 28px;
+    }
 
 		&__name {
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 600;
+      margin-bottom: 6px;
 		}
 
 		&__about {
+      margin-bottom: 23px;
 		}
 
 		&__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 113px;
+      height: 35px;
+      
+      font-size: 16px;
+      font-weight: 500;
+      color:#3057A2;
+
+      border: 1px solid #3057A2;
+      border-radius: 62px;
 		}
 }
+
+.participants-count {
+    font-size: 16px;
+    line-height: 1.2;
+
+		&__current {
+		}
+
+		&__separator {
+      opacity: 0.6;
+		}
+
+		&__total {
+      opacity: 0.6;
+		}
+}
+
+
 .footer {
 
 		&__container {
