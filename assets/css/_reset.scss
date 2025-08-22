@@ -50,11 +50,18 @@ body {
 .running-line {
     display: flex;
     align-items: center;
+    height: 60px;
+
     font-family: "Merriweather";
     font-size: 22px;
-    background-color: #F54932;
     color: white;
-    height: 60px;
+
+    background-color: #F54932;
+
+    @media (max-width: 414px) {
+        height: 38px;
+        font-size: 16px;
+    }
 
     ul {
         display: flex;
