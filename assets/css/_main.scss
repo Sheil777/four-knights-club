@@ -336,6 +336,7 @@
 }
 .participants {
   padding-top: 200px;
+  padding-bottom: 143px;
 
 		&__container {
       position: relative;
@@ -462,10 +463,15 @@
 
 
 .footer {
+    background-color: #E9DED4;
 
 		&__container {
-		}
+      padding-top: 40px;
+      padding-bottom: 72px;
 
-		&__running-line {
+      p {
+        font-size: 16px;
+        line-height: 1.2;
+      }
 		}
 }

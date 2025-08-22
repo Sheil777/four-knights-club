@@ -353,6 +353,7 @@ body {
 
 .participants {
   padding-top: 200px;
+  padding-bottom: 143px;
 }
 .participants__container {
   position: relative;
@@ -453,4 +454,16 @@ body {
 }
 .participants-count__total {
   opacity: 0.6;
+}
+
+.footer {
+  background-color: #E9DED4;
+}
+.footer__container {
+  padding-top: 40px;
+  padding-bottom: 72px;
+}
+.footer__container p {
+  font-size: 16px;
+  line-height: 1.2;
 }/*# sourceMappingURL=style.css.map */
