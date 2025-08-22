@@ -409,6 +409,11 @@ body {
   justify-content: space-between;
   padding-top: 64px;
 }
+@media (max-width: 1250px) {
+  .game__container {
+    flex-direction: column;
+  }
+}
 .game__image {
   position: relative;
   height: 563px;
@@ -420,6 +425,13 @@ body {
   margin-left: -25px;
   margin-top: -25px;
 }
+@media (max-width: 1250px) {
+  .game__image img {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+}
 .game__image::before {
   content: "";
   position: absolute;
@@ -428,6 +440,13 @@ body {
   width: 525px;
   height: 100%;
   background-color: white;
+}
+@media (max-width: 1250px) {
+  .game__image::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .game__image-filter {
   mix-blend-mode: color-burn;
@@ -443,6 +462,11 @@ body {
   line-height: 1.35;
   letter-spacing: 0.04rem;
 }
+@media (max-width: 1250px) {
+  .game__main h2 {
+    text-align: center;
+  }
+}
 .game__main h2 ._color-red {
   letter-spacing: 0.02rem;
 }
@@ -450,6 +474,12 @@ body {
   border-collapse: collapse;
   border-style: hidden;
   margin-top: 60px;
+}
+@media (max-width: 1250px) {
+  .game__main table {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .game__main table tr td {
   border: 2px solid #D0D0D0;
@@ -475,6 +505,11 @@ body {
   line-height: 1.2;
   color: #3057A2;
   margin-top: 34px;
+}
+@media (max-width: 1250px) {
+  .game__main p {
+    text-align: center;
+  }
 }
 
 .story__container {
