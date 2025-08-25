@@ -334,11 +334,19 @@
       @media (max-width: 1250px) {
         flex-direction: column;
       }
+
+      @media (max-width: 520px) {
+        padding-top: 34px;
+      }
 		}
 
 		&__image {
       position: relative;
       height: 563px;
+
+      @media (max-width: 520px) {
+        height: 400px;
+      }
 
       img {
         position: absolute;
@@ -352,6 +360,10 @@
           left: 50%;
           transform: translateX(-50%);
           margin: 0;
+        }
+
+        @media (max-width: 520px) {
+          
         }
       }
 
@@ -387,8 +399,30 @@
         line-height: 1.35;
         letter-spacing: 0.04rem;
 
+        br.mobile {
+          display: none;
+
+          @media (max-width: 415px) {
+            display: block;
+          }
+        }
+
         @media (max-width: 1250px) {
           text-align: center;
+        }
+
+        @media (max-width: 520px) {
+          font-size: 28px;
+        }
+
+        @media (max-width: 415px) {
+          text-align: start;
+          margin-top: 28px;
+          letter-spacing: 0.01rem;
+
+          span br {
+            display: none;
+          }
         }
 
         ._color-red {
@@ -406,12 +440,36 @@
           margin-right: auto;
         }
 
+        @media (max-width: 520px) {
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 28px;
+          width: 100%;
+        }
+
         tr {
+          @media (max-width: 520px) {
+            display: flex;
+            flex-direction: column;;
+            border-bottom: 2px solid #D0D0D0;
+            gap: 14px;
+            padding: 16px 0;
+
+            &.price {
+              flex-direction: row;
+            }
+          }
+
           td {
             border: 2px solid #D0D0D0;
             padding: 16px;
             padding-right: 20px;
             line-height: 1.1;
+
+            @media (max-width: 520px) {
+              border: none;
+              padding: 0;
+            }
 
             del {
               text-decoration-color: red;
@@ -442,6 +500,15 @@
 
         @media (max-width: 1250px) {
           text-align: center;
+        }
+
+        @media (max-width: 520px) {
+          font-size: 18px;
+        }
+
+        @media (max-width: 415px) {
+          text-align: start;
+          margin-top: 24px;
         }
       }
 		}

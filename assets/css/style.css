@@ -414,9 +414,19 @@ body {
     flex-direction: column;
   }
 }
+@media (max-width: 520px) {
+  .game__container {
+    padding-top: 34px;
+  }
+}
 .game__image {
   position: relative;
   height: 563px;
+}
+@media (max-width: 520px) {
+  .game__image {
+    height: 400px;
+  }
 }
 .game__image img {
   position: absolute;
@@ -462,9 +472,32 @@ body {
   line-height: 1.35;
   letter-spacing: 0.04rem;
 }
+.game__main h2 br.mobile {
+  display: none;
+}
+@media (max-width: 415px) {
+  .game__main h2 br.mobile {
+    display: block;
+  }
+}
 @media (max-width: 1250px) {
   .game__main h2 {
     text-align: center;
+  }
+}
+@media (max-width: 520px) {
+  .game__main h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 415px) {
+  .game__main h2 {
+    text-align: start;
+    margin-top: 28px;
+    letter-spacing: 0.01rem;
+  }
+  .game__main h2 span br {
+    display: none;
   }
 }
 .game__main h2 ._color-red {
@@ -481,11 +514,37 @@ body {
     margin-right: auto;
   }
 }
+@media (max-width: 520px) {
+  .game__main table {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 28px;
+    width: 100%;
+  }
+}
+@media (max-width: 520px) {
+  .game__main table tr {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #D0D0D0;
+    gap: 14px;
+    padding: 16px 0;
+  }
+  .game__main table tr.price {
+    flex-direction: row;
+  }
+}
 .game__main table tr td {
   border: 2px solid #D0D0D0;
   padding: 16px;
   padding-right: 20px;
   line-height: 1.1;
+}
+@media (max-width: 520px) {
+  .game__main table tr td {
+    border: none;
+    padding: 0;
+  }
 }
 .game__main table tr td del {
   text-decoration-color: red;
@@ -509,6 +568,17 @@ body {
 @media (max-width: 1250px) {
   .game__main p {
     text-align: center;
+  }
+}
+@media (max-width: 520px) {
+  .game__main p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 415px) {
+  .game__main p {
+    text-align: start;
+    margin-top: 24px;
   }
 }
 
