@@ -88,3 +88,32 @@ body {
     transform: translate(-100%, 0);
   }
 }
+
+.button {
+    &__prev, &__next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+
+      background-color: #313131;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #FBCE51;
+      }
+
+      &.disabled {
+        background-color: #D6D6D6;
+      }
+    }
+
+    &__next {
+      transform: rotate(180deg);
+    }
+}
