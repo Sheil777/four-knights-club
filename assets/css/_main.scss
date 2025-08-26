@@ -303,6 +303,17 @@
 
         @media (max-width: 415px) {
           margin-bottom: 9px;
+        }         
+      
+        &._scroll-anim {
+          transition: all 0.8s ease 0s;
+          transform: translate(50%, 0);
+          opacity: 0;
+      
+          &-active {
+            transform: translate(0, 0);
+            opacity: 1;
+          }
         }
       }
 		}
@@ -320,6 +331,17 @@
 
       @media (max-width: 365px) {
         font-size: 24px;
+      } 
+      
+      &._scroll-anim {
+        transition: all 0.8s ease 0s;
+        transform: translate(0, -50%);
+        opacity: 0;
+    
+        &-active {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
       }
     }
 

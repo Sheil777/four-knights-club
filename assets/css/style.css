@@ -413,6 +413,15 @@ body {
     margin-bottom: 9px;
   }
 }
+.lecture__container img._scroll-anim {
+  transition: all 0.8s ease 0s;
+  transform: translate(50%, 0);
+  opacity: 0;
+}
+.lecture__container img._scroll-anim-active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
 .lecture__header {
   font-family: "Merriweather";
   font-size: 36px;
@@ -429,6 +438,15 @@ body {
   .lecture__header {
     font-size: 24px;
   }
+}
+.lecture__header._scroll-anim {
+  transition: all 0.8s ease 0s;
+  transform: translate(0, -50%);
+  opacity: 0;
+}
+.lecture__header._scroll-anim-active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .lecture__header_mobile {
   display: none;
