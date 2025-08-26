@@ -857,6 +857,7 @@ body {
 }
 .story__dot {
   flex: 0 0 10px;
+  width: 10px;
   height: 10px;
   background-color: #D9D9D9;
   border-radius: 50%;
