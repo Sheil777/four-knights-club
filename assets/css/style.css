@@ -96,6 +96,13 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+@media (max-width: 450px) {
+  .button__prev, .button__next {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+  }
+}
 .button__prev:hover, .button__next:hover {
   background-color: #FBCE51;
 }
@@ -667,7 +674,11 @@ body {
 }
 .story__slider {
   position: relative;
-  padding-top: 95px;
+}
+@media (max-width: 1250px) {
+  .story__slider {
+    padding-top: 95px;
+  }
 }
 .story__wrapper {
   overflow: hidden;
@@ -697,6 +708,11 @@ body {
     grid-auto-flow: column;
   }
 }
+@media (max-width: 750px) {
+  .story__stages {
+    grid-auto-columns: 100%;
+  }
+}
 .story__stages li {
   display: flex;
   gap: 16px;
@@ -707,6 +723,18 @@ body {
   counter-increment: number;
   padding: 20px;
 }
+@media (max-width: 750px) {
+  .story__stages li {
+    padding-top: 62px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 450px) {
+  .story__stages li {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
 .story__stages li::before {
   content: counter(number);
   display: flex;
@@ -715,11 +743,16 @@ body {
   flex: 0 0 36px;
   height: 36px;
   background-color: white;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 50%;
 }
 .story__stages li span {
   line-height: 1.2;
+}
+@media (max-width: 750px) {
+  .story__stages .item2 {
+    padding-top: 28px;
+  }
 }
 .story__stages .item3 {
   grid-column: 3;
@@ -733,6 +766,12 @@ body {
 }
 .story__stages .item5 {
   padding-right: 25px;
+}
+@media (max-width: 750px) {
+  .story__stages .item5 {
+    padding-top: 0;
+    margin-top: -16px;
+  }
 }
 @media (max-width: 1250px) {
   .story__stages .item6 {
@@ -757,6 +796,7 @@ body {
   position: absolute;
   right: -63px;
   bottom: -2px;
+  z-index: 5;
 }
 @media (max-width: 1250px) {
   .story__image {
@@ -770,6 +810,14 @@ body {
     right: auto;
     transform: unset;
     left: 50px;
+  }
+}
+@media (max-width: 750px) {
+  .story__image {
+    width: 340px;
+    top: 16px;
+    left: 8px;
+    transform: rotate(-3deg);
   }
 }
 .story__pagination {

@@ -104,6 +104,12 @@ body {
       cursor: pointer;
       transition: background-color 0.3s;
 
+      @media (max-width: 450px) {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+      }
+
       &:hover {
         background-color: #FBCE51;
       }
