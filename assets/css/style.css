@@ -105,8 +105,13 @@ body {
     flex: 0 0 36px;
   }
 }
-.button__prev:hover, .button__next:hover {
-  background-color: #FBCE51;
+@media (hover: hover) {
+  .button__prev:hover, .button__next:hover {
+    background-color: #FBCE51;
+  }
+}
+.button__prev:active, .button__next:active {
+  background-color: #d7a722;
 }
 .button__prev.disabled, .button__next.disabled {
   background-color: #D6D6D6;
@@ -312,7 +317,13 @@ body {
     display: none;
   }
 }
-.promo__button:hover {
+@media (hover: hover) {
+  .promo__button:hover {
+    background-color: #1F1F1F;
+    color: white;
+  }
+}
+.promo__button:active {
   background-color: #1F1F1F;
   color: white;
 }
@@ -326,7 +337,14 @@ body {
   background-color: #1f1f1f;
   color: white;
 }
-.promo__button_fill:hover {
+@media (hover: hover) {
+  .promo__button_fill:hover {
+    background-color: #FBCE51;
+    border: 2px solid #FBCE51;
+    color: #1F1F1F;
+  }
+}
+.promo__button_fill:active {
   background-color: #FBCE51;
   border: 2px solid #FBCE51;
   color: #1F1F1F;
@@ -844,7 +862,7 @@ body {
   display: flex;
   gap: 16px;
   background-color: rgb(241, 227, 211);
-  background-image: url("../img/promo_background.png");
+  background-image: url("../img/promo/promo_background.png");
   background-blend-mode: color-burn;
   min-height: 112px;
   counter-increment: number;
@@ -1134,7 +1152,13 @@ body {
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
 }
-.participants-card__button:hover {
+@media (hover: hover) {
+  .participants-card__button:hover {
+    background-color: #3057A2;
+    color: white;
+  }
+}
+.participants-card__button:active {
   background-color: #3057A2;
   color: white;
 }

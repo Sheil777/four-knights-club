@@ -199,7 +199,14 @@
         }
       }
 
-      &:hover {
+      @media (hover: hover) {
+        &:hover {
+          background-color: #1F1F1F;
+          color: white;
+        }
+      }
+
+      &:active {
         background-color: #1F1F1F;
         color: white;
       }
@@ -212,11 +219,19 @@
       &_fill {
         background-color: #1f1f1f;
         color: white;
+        
+        @media (hover: hover) {
+          &:hover {
+            background-color: #FBCE51;
+            border: 2px solid #FBCE51;
+            color: #1F1F1F;
+          }
+        }
 
-        &:hover {
-          background-color: #FBCE51;
-          border: 2px solid #FBCE51;
-          color: #1F1F1F;
+        &:active {
+            background-color: #FBCE51;
+            border: 2px solid #FBCE51;
+            color: #1F1F1F;
         }
       }
 
@@ -756,7 +771,7 @@
         display: flex;
         gap: 16px;
         background-color: rgb(241, 227, 211);
-        background-image: url("../img/promo_background.png");
+        background-image: url("../img/promo/promo_background.png");
         background-blend-mode: color-burn;
         min-height: 112px;
         counter-increment: number;
@@ -1053,9 +1068,16 @@
       transition: background-color 0.3s, color 0.3s;
       cursor: pointer;
       
-      &:hover {
-        background-color: #3057A2;
-        color: white;
+      @media (hover: hover) {
+        &:hover {
+          background-color: #3057A2;
+          color: white;
+        }
+      }
+
+      &:active {
+          background-color: #3057A2;
+          color: white;
       }
 		}
 }

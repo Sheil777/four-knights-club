@@ -112,8 +112,14 @@ body {
         flex: 0 0 36px;
       }
 
-      &:hover {
-        background-color: #FBCE51;
+      @media (hover: hover) {
+        &:hover {
+            background-color: #FBCE51;
+        }
+      }
+      
+      &:active {
+          background-color: #d7a722;
       }
 
       &.disabled {
