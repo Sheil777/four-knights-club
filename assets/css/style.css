@@ -873,6 +873,7 @@ body {
 @media (max-width: 500px) {
   .participants {
     padding-top: 118px;
+    padding-bottom: 110px;
   }
 }
 .participants__container {
