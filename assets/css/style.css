@@ -723,10 +723,15 @@ body {
   counter-increment: number;
   padding: 20px;
 }
+@media (max-width: 1250px) {
+  .story__stages li {
+    padding-top: 38px;
+    padding-bottom: 0;
+  }
+}
 @media (max-width: 750px) {
   .story__stages li {
     padding-top: 62px;
-    padding-bottom: 0;
   }
 }
 @media (max-width: 450px) {
@@ -749,6 +754,11 @@ body {
 .story__stages li span {
   line-height: 1.2;
 }
+@media (max-width: 1250px) {
+  .story__stages .item2 {
+    padding-top: 0;
+  }
+}
 @media (max-width: 750px) {
   .story__stages .item2 {
     padding-top: 28px;
@@ -767,9 +777,13 @@ body {
 .story__stages .item5 {
   padding-right: 25px;
 }
-@media (max-width: 750px) {
+@media (max-width: 1250px) {
   .story__stages .item5 {
     padding-top: 0;
+  }
+}
+@media (max-width: 750px) {
+  .story__stages .item5 {
     margin-top: -16px;
   }
 }
