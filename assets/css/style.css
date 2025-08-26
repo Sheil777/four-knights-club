@@ -48,6 +48,8 @@ body {
 }
 
 .running-line {
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
   height: 60px;
@@ -146,9 +148,8 @@ body {
 }
 
 .promo {
+  position: relative;
   background-color: #E9DED4;
-  background-image: url("../img/promo_background.png");
-  background-blend-mode: color-burn;
 }
 .promo__container {
   position: relative;
@@ -331,39 +332,63 @@ body {
   color: #1F1F1F;
 }
 .promo__background {
+  overflow: hidden;
   position: absolute;
-  top: -51px;
-  right: -328px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-@media (max-width: 1000px) {
-  .promo__background {
-    top: unset;
-    bottom: 0;
-    right: -140px;
-  }
+.promo__background .img-sun {
+  position: absolute;
+  bottom: 121px;
+  left: 50%;
+  transform: translateX(-68px);
 }
-@media (max-width: 415px) {
-  .promo__background {
-    right: -150px;
-  }
+.promo__background .img-king {
+  position: absolute;
+  bottom: 225px;
+  left: 50%;
+  transform: translateX(46px);
 }
-.promo__background img {
-  height: 750px;
+.promo__background .img-queen {
+  position: absolute;
+  bottom: 330px;
+  left: 50%;
+  transform: translateX(379px);
 }
-@media (max-width: 1000px) {
-  .promo__background img {
-    height: 560px;
-  }
+.promo__background .img-city {
+  position: absolute;
+  bottom: 62px;
+  left: 50%;
+  transform: translateX(-804px);
 }
-@media (max-width: 768px) {
-  .promo__background img {
-    height: 445px;
-  }
+.promo__background .img-filter-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/promo/promo_background.png");
+  mix-blend-mode: color-burn;
 }
-@media (max-width: 415px) {
-  .promo__background img {
-    height: 390px;
-  }
+.promo__background .img-filter {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.promo__background .img-knight {
+  position: absolute;
+  bottom: 9px;
+  left: 50%;
+  transform: translateX(152px);
+}
+.promo__background .img-pawn {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(556px);
 }
 .running-line {
   margin-top: -1px;

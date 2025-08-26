@@ -34,9 +34,8 @@
   }
 }
 .promo {
+    position: relative;
     background-color: #E9DED4;
-    background-image: url("../img/promo_background.png");
-    background-blend-mode: color-burn;
 
 		&__container {
       position: relative;
@@ -223,37 +222,73 @@
 
     }
 
-		&__background {
+    &__background {
+      overflow: hidden;
       position: absolute;
-      top: -51px;
-      right: -328px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-      @media (max-width: 1000px) {
-        top: unset;
-        bottom: 0;
-        right: -140px;
+      & .img-sun {
+        position: absolute;
+        bottom: 121px;
+        left: 50%;
+        transform: translateX(-68px);
       }
 
-      @media (max-width: 415px) {
-        right: -150px;
+      & .img-king {
+        position: absolute;
+        bottom: 225px;
+        left: 50%;
+        transform: translateX(46px);
       }
 
-      img {
-        height: 750px;
-
-        @media (max-width: 1000px) {
-          height: 560px;
-        }
-
-        @media (max-width: 768px) {
-          height: 445px;
-        }
-
-        @media (max-width: 415px) {
-          height: 390px;
-        }
+      & .img-queen {
+        position: absolute;
+        bottom: 330px;
+        left: 50%;
+        transform: translateX(379px);
       }
-		}
+
+      & .img-city {
+        position: absolute;
+        bottom: 62px;
+        left: 50%;
+        transform: translateX(-804px);
+      }
+
+      & .img-filter-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/promo/promo_background.png');
+        mix-blend-mode: color-burn;
+      }
+
+      & .img-filter {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      & .img-knight {
+        position: absolute;
+        bottom: 9px;
+        left: 50%;
+        transform: translateX(152px);
+      }
+
+      & .img-pawn {
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(556px);
+      }
+    }
 
 		&__running-line {
 		}
