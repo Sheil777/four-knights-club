@@ -635,6 +635,10 @@
           font-weight: 500;
         }
 
+        @media (max-width: 333px) {
+          font-size: 16px;
+        }
+
         &::before {
           content: counter(number);
           display: flex;
@@ -765,6 +769,10 @@
   padding-top: 200px;
   padding-bottom: 143px;
 
+  @media (max-width: 500px) {
+    padding-top: 118px;
+  }
+
 		&__container {
       position: relative;
 
@@ -773,8 +781,13 @@
         font-size: 54px;
         line-height: 1.2;
         text-transform: uppercase;
-        letter-spacing: 2px;
         letter-spacing: 0.08rem;
+
+        @media (max-width: 500px) {
+          font-size: 36px;
+          letter-spacing: 0.02rem;
+          line-height: 1.1;
+        }
       }
 		}
 
@@ -786,10 +799,22 @@
 		&__list {
       display: flex;
       padding-top: 60px;
+
+      @media (max-width: 500px) {
+        padding-top: 42px;
+      }
 		}
 
 		&__card {
       flex: 0 0 33.333%; 
+
+      @media (max-width: 1050px) {
+        flex: 0 0 50%;
+      }
+
+      @media (max-width: 750px) {
+        flex: 0 0 100%;
+      }
 		}
 
     &__navigation {
@@ -799,6 +824,17 @@
       display: flex;
       align-items: center;
       gap: 15px;
+
+      @media (max-width: 880px) {
+        position: relative;
+        justify-content: center;
+        margin-top: 30px;
+        right: 0;
+      }
+
+      @media (max-width: 450px) {
+        gap: 12px;
+      }
     }
 }
 .participants-card {
@@ -814,6 +850,10 @@
       object-position: center;
       border-radius: 50%;
       margin-bottom: 28px;
+
+      @media (max-width: 500px) {
+        max-width: 244px;
+      }
     }
 
 		&__name {
@@ -821,6 +861,10 @@
       line-height: 1.2;
       font-weight: 600;
       margin-bottom: 6px;
+
+      @media (max-width: 500px) {
+        margin-bottom: 10px;
+      }
 		}
 
 		&__about {
